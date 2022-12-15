@@ -1,53 +1,22 @@
+let pocetPokusu = 0
+let pocetSestek = 0
 
-
-let pocitani2 = 0
-let pocitani = 0
-let kostka = randint (1, 6)
-
-
-input.onGesture(Gesture.Shake, function() {
-    kostka = randint (1, 6) 
+input.onGesture(Gesture.Shake, function () {
+    let kostka = randint(1, 6)
     if (kostka == 6) {
-        (music.ringTone(Note.C));
-        whaleysans.showNumber(6)
-
-        basic.pause(300)
-
-        basic.clearScreen()
+        music.playTone(Note.C, 200)
+        pocetSestek += 1
     } else {
-        (music.ringTone(Note.B));
-        whaleysans.showNumber(kostka)
-        basic.pause(300)
-
-        basic.clearScreen()
+        music.playTone(Note.B, 200)
     }
+    basic.showNumber(kostka, 0)
+    basic.pause(300)
+    basic.clearScreen()
+    if (pocetSestek >= 3) {
+        whaleysans.showNumber(pocetPokusu)
+        basic.pause(3000)
+        pocetPokusu = 0
+        pocetSestek = 0
+    }
+    pocetPokusu += 1
 })
-
-if (kostka == 6) {pocitani2 += 1}
-if (kostka ==5) {pocitani2 +=1}
-if (kostka == 4) { pocitani2 += 1}
-if (kostka == 3) { pocitani2 += 1}
-if (kostka == 2) { pocitani2 += 1}
-if (kostka == 1) { pocitani2 += 1}
-
-
-
-    if (kostka == 6) {pocitani +=1}
-    
-    if (pocitani == 3) { 
-        
-        music.ringTone(Note.B)
-        
-        basic.showString("Hotovo!")
-
-        basic.clearScreen()
-
-        basic.showString("pocet pokusu:")
-
-        basic.clearScreen()
-
-        whaleysans.showNumber(pocitani2)
-
-
-    };
-    
