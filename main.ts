@@ -6,6 +6,7 @@ let kostka = randint (1, 6)
 
 
 input.onGesture(Gesture.Shake, function() {
+    kostka = randint (1, 6) 
     if (kostka == 6) {
         (music.ringTone(Note.C));
         whaleysans.showNumber(6)
