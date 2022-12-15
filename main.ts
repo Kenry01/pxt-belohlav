@@ -10,13 +10,13 @@ input.onGesture(Gesture.Shake, function() {
         (music.ringTone(Note.C));
         whaleysans.showNumber(6)
 
-        basic.pause(100)
+        basic.pause(300)
 
         basic.clearScreen()
     } else {
         (music.ringTone(Note.B));
         whaleysans.showNumber(kostka)
-        basic.pause(100)
+        basic.pause(300)
 
         basic.clearScreen()
     }
