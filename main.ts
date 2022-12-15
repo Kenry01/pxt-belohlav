@@ -1,14 +1,5 @@
 
-/*
-let kostka = Math.random();
 
-
-
-    input.onGesture(Gesture.Shake, function () {
-        if (kostka) {
-
-        }
-    }) */
 let pocitani2 = 0
 let pocitani = 0
 let kostka = randint (1, 6)
